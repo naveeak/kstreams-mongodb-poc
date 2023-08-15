@@ -8,6 +8,7 @@
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
+    java
 }
 
 repositories {
@@ -16,6 +17,11 @@ repositories {
 }
 
 dependencies {
+    implementation ("org.apache.kafka:kafka-streams:3.1.2")
+    
+    // https://mvnrepository.com/artifact/org.slf4j/slf4j-nop
+    testImplementation("org.slf4j:slf4j-nop:1.7.36")
+
     // Use JUnit test framework.
     testImplementation("junit:junit:4.13.2")
 
