@@ -3,7 +3,6 @@ package io.github.naveeak.kafkastreams;
 import java.io.IOException;
 import java.util.Properties;
 
-import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.Serdes;
 import org.apache.kafka.streams.KafkaStreams;
 import org.apache.kafka.streams.StreamsBuilder;
@@ -24,7 +23,7 @@ public class App {
         Properties config = new Properties();
         //get the config from the confluent cloud
         config.load(App.class.getResourceAsStream("/application.properties"));
-        config.put(StreamsConfig.APPLICATION_ID_CONFIG, "test");
+        config.put(StreamsConfig.APPLICATION_ID_CONFIG, "testa");
         config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
 

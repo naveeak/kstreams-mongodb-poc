@@ -19,8 +19,9 @@ repositories {
 dependencies {
     implementation ("org.apache.kafka:kafka-streams:3.1.2")
 
-    // https://mvnrepository.com/artifact/org.slf4j/slf4j-nop
-    testImplementation("org.slf4j:slf4j-nop:1.7.36")
+    // https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver
+    implementation("org.mongodb:mongo-java-driver:3.12.11")
+
 
     // Use JUnit test framework.
     testImplementation("junit:junit:4.13.2")
