@@ -18,7 +18,7 @@ repositories {
 
 dependencies {
     implementation ("org.apache.kafka:kafka-streams:3.1.2")
-    
+
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-nop
     testImplementation("org.slf4j:slf4j-nop:1.7.36")
 
@@ -39,4 +39,12 @@ java {
 application {
     // Define the main class for the application.
     mainClass.set("a.a.b.b.App")
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs("src/main/resources")
+        }
+    }
 }

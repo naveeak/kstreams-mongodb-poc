@@ -23,7 +23,8 @@ public class App {
 
         Properties config = new Properties();
         //get the config from the confluent cloud
-        config.load(App.class.getResourceAsStream("application.properties"));
+        config.load(App.class.getResourceAsStream("/application.properties"));
+        config.put(StreamsConfig.APPLICATION_ID_CONFIG, "test");
         config.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass());
         config.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass());
 
